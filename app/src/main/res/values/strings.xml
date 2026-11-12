@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Task</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="digite_seu_e_mail">Digite seu e-mail</string>
+    <string name="senha">Senha</string>
+    <string name="digite_sua_senha">Digite sua senha</string>
+    <string name="login">Login</string>
+    <string name="criar_conta">Criar Conta</string>
+    <string name="recuperar_conta">Recuperar Conta</string>
+    <string name="digite_seu_e_maill">Digite seu e-mail</string>
+    <string name="senhaa">Senha</string>
+    <string name="digite_sua_senhaa">Digite sua senha</string>
+    <string name="loginn">Login</string>
+    <string name="recuperar_contaa">Recuperar Conta</string>
+    <string name="e_maill">E-mail</string>
+    <string name="enviar">Enviar</string>
+    <string name="criar_contaaa">Criar Conta</string>
+
+</resources>
