@@ -7,6 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.HomeFragment">
 
+    <!-- Topo com comportamento de scroll e cor padrão -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,14 +15,15 @@
         android:elevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConstraintLayout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ConstraintLayout1">
-            <!-- Table Layiut -->
+            android:layout_height="wrap_content">
+
+            <!-- TabLayout com largura restrita entre o início e o botão de logout -->
             <com.google.android.material.tabs.TabLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:id="@+id/tabs"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
                 android:background="@color/color_default"
                 android:contentDescription="Tabs"
                 android:elevation="0dp"
@@ -29,23 +31,23 @@
                 app:tabPaddingStart="24dp"
                 app:tabPaddingEnd="24dp"
                 app:tabTextAppearance="@style/CustomTabLayout"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bntLogout"
                 app:tabIndicatorColor="@color/white"
-                app:tabSelectedTextColor="@color/black"
                 app:tabTextColor="@color/white"/>
 
+            <!-- Botão de Logout -->
             <ImageButton
                 android:id="@+id/bntLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
                 android:background="@color/color_default"
                 android:contentDescription="Logout"
                 android:padding="24dp"
                 android:src="@drawable/baseline_logout_24"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -53,6 +55,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!-- Conteúdo do ViewPager2 que responde ao scroll inteligente -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
